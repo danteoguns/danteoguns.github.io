@@ -11,7 +11,12 @@
 
     <title>About Me | Daniel Ogunsanya CV</title>
 
-    <style>
+    <style type="text/css">
+        @import url("css/bootstrap-3.3.7-dist/css/bootstrap.css");
+        @import url("css/bootstrap-3.3.7-dist/css/bootstrap.min.css");
+        @import url("css/bootstrap-3.3.7-dist/css/bootstrap-theme.css");
+        @import url("css/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css");
+
         .grid-container {
             display: grid;
             grid-template-columns: auto auto auto auto;
@@ -40,12 +45,26 @@
 
 </head>
 <body>
-<nav>
-    <div class="space">
-        <a href="about.html">About Me</a> &nbsp; | &nbsp;
-        <a href="projects.html">Projects</a> &nbsp; | &nbsp;
-        <a href="skills.html">Skills</a> &nbsp; | &nbsp;
-        <a href="contact.html">Contact</a>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="about.html">Daniel Ogunsanya</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
     </div>
 </nav>
 
@@ -66,8 +85,8 @@
     </div>
 </div>
 
-<h2>Education</h2>
-<div class="grid-container">
+<h2 class="space">Education</h2>
+<div class="grid-container space">
     <div class="item1"><b>Sept 2014 – May 2017:</b></div>
     <div class="item2"><b>University of Kent</b></div>
     <div class="item1">Qualification:</div>
@@ -123,13 +142,9 @@
 
 <h2>Hobbies</h2>
 <div>
-<p>
-    I enjoy graphics designing in my spare time by designing different products such as logos, flyers, business cards and websites.
-    <br><br>
-    When possible, I like to explore by travelling to different countries such as Spain, Croatia, Belgium and Amsterdam.
-    <br><br>
-    Also, I take pleasure in playing pools with friends and going to the studio to assist in making music.
-</p>
+    <li>I enjoy graphics designing in my spare time by designing different products such as logos, flyers, business cards and websites.</li>
+    <li>When possible, I like to explore by travelling to different countries such as Spain, Croatia, Belgium and Amsterdam.</li>
+    <li>Also, I take pleasure in playing pools with friends and going to the studio to assist in making music.</li>
 </div>
     </div>
 </div>

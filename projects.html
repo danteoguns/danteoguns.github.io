@@ -11,44 +11,38 @@
 
     <title>Projects | Daniel Ogunsanya CV</title>
 
-    <style>
-        .grid-container {
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-            grid-gap: 10px;
-            padding: 10px;
-        }
-        .grid-container>div {
-            text-align: left;
-            padding:5px 0;
-            font-size: 17px;
-        }
-
-        .item1 {
-            grid-column: 1 / span 1;
-        }
-
-        .space {
-            padding: 15px 15px 0px;
-        }
+    <style type="text/css">
+        @import url("css/bootstrap-3.3.7-dist/css/bootstrap.css");
+        @import url("css/bootstrap-3.3.7-dist/css/bootstrap.min.css");
+        @import url("css/bootstrap-3.3.7-dist/css/bootstrap-theme.css");
+        @import url("css/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css");
     </style>
 
 
 </head>
 <body>
-<nav>
-    <div class="space">
-        <a href="about.html">About Me</a> &nbsp; | &nbsp;
-        <a href="projects.html">Projects</a> &nbsp; | &nbsp;
-        <a href="skills.html">Skills</a> &nbsp; | &nbsp;
-        <a href="contact.html">Contact</a>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="about.html">Daniel Ogunsanya</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li class="active"><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
     </div>
 </nav>
 <br>
-
-
-
-</h1>
 
 </body>
 </html>

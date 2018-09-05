@@ -11,49 +11,75 @@
 
     <title>Contact Me | Daniel Ogunsanya CV</title>
 
-    <style>
+    <style type="text/css">
         @import url("css/bootstrap-3.3.7-dist/css/bootstrap.css");
         @import url("css/bootstrap-3.3.7-dist/css/bootstrap.min.css");
         @import url("css/bootstrap-3.3.7-dist/css/bootstrap-theme.css");
         @import url("css/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css");
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-            grid-gap: 10px;
-            padding: 10px;
-        }
-        .grid-container>div {
-            text-align: left;
-            padding:5px 0;
-            font-size: 17px;
-        }
-
-        .item1 {
-            grid-column: 1 / span 1;
-        }
-
-        .space {
-            padding: 15px 15px 0px;
-        }
     </style>
 
 
 </head>
 <body>
-<nav>
-    <div class="space">
-        <a href="about.html">About Me</a> &nbsp; | &nbsp;
-        <a href="projects.html">Projects</a> &nbsp; | &nbsp;
-        <a href="skills.html">Skills</a> &nbsp; | &nbsp;
-        <a href="contact.html">Contact</a>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="about.html">Daniel Ogunsanya</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li class="active"><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
     </div>
 </nav>
 <br>
 
-
-
-</h1>
+<form>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="FirstName">First Name</label>
+            <input type="text" class="form-control" id="FirstName" placeholder="First Name">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="LastName">Last Name</label>
+            <input type="text" class="form-control" id="LastName" placeholder="Last Name">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="Email">Email</label>
+            <input type="email" class="form-control" id="Email" placeholder="Email">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Subject">Phone Number</label>
+            <input type="number" class="form-control" id="Subject" placeholder="Phone Number">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-12">
+        <label for="person">Specify your role (required):</label>
+        <select class="form-control" id="person">
+            <option>QA Employee</option>
+            <option>Developer</option>
+            <option>Recruiter</option>
+        </select>
+        </div>
+        <div class="form-group col-md-12">
+            <label for="Message">Message</label>
+            <textarea class="form-control" id="Message" rows="3"></textarea>
+        </div>
+    </div>
+</form>
 
 </body>
 </html>

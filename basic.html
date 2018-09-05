@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variables</title>
+
+    <style type="text/css">
+        @import url("css/bootstrap-3.3.7-dist/css/bootstrap.css");
+        @import url("css/bootstrap-3.3.7-dist/css/bootstrap.min.css");
+        @import url("css/bootstrap-3.3.7-dist/css/bootstrap-theme.css");
+        @import url("css/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css");
+
+        .btn{
+            vertical-align: middle;
+        }
+
+        .space {
+            padding: 15px 15px 0px;
+        }
+
+    </style>
+
+    <!--Variables 1-->
+    <script>
+        var one = 3;
+        var two = 9;
+        var three = one + two;
+    </script>
+
+    <!--Function 1-->
+    <script>
+        var input1 = 4;
+
+        function functionOne(input1) {
+            return input1*input1;
+        }
+    </script>
+
+    <!--Function 2-->
+    <script>
+        var num1 = 1;
+        var num2 = 2;
+        var num3 = 3;
+
+        function functionTwo(num1, num2, num3) {
+            return num1+num2+num3;
+        }
+    </script>
+
+    <!--Variables 2-->
+    <script>
+        var person = {
+            name: 'Daniel',
+            age: 22,
+            occupation: 'IT Consultant'
+        }
+    </script>
+
+    <!--New Exercise-->
+    <script>
+        function noValue() {
+            return window.alert("Please Enter A Value");
+        }
+
+    </script>
+
+    <!--Addition-->
+    <script>
+        function addition() {
+            var numOne = document.getElementById("Number1").value;
+            var numTwo = document.getElementById("Number2").value;
+            var sum = parseInt(numOne) + parseInt(numTwo);
+            document.getElementById("result").value = sum;
+
+            if (!numOne || !numTwo){
+                noValue();
+            }
+        }
+    </script>
+
+    <!--Subtraction-->
+    <script>
+        function subtraction() {
+            var numOne = document.getElementById("Number1").value;
+            var numTwo = document.getElementById("Number2").value;
+            var sum = parseInt(numOne) - parseInt(numTwo);
+            document.getElementById("result").value = sum;
+
+            if (!numOne || !numTwo){
+                noValue();
+            }
+        }
+    </script>
+
+    <!--Multiplication-->
+    <script>
+        function multiplication() {
+            var numOne = document.getElementById("Number1").value;
+            var numTwo = document.getElementById("Number2").value;
+            var sum = parseInt(numOne) * parseInt(numTwo);
+            document.getElementById("result").value = sum;
+
+            if (!numOne || !numTwo){
+                noValue();
+            }
+        }
+    </script>
+
+    <!--Division-->
+    <script>
+        function division() {
+            var numOne = document.getElementById("Number1").value;
+            var numTwo = document.getElementById("Number2").value;
+            var sum = parseInt(numOne) / parseInt(numTwo);
+            document.getElementById("result").value = sum;
+
+            if (!numOne || !numTwo){
+                noValue();
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="space">
+<p>Creating A Script</p>
+<script>
+    alert('Hello World');
+</script>
+<hr>
+
+<p>Variables 1</p>
+<script>
+    alert(three);
+    console.log(three);
+    document.write(three);
+</script>
+<br>
+<hr>
+
+<p>Functions 1</p>
+<script>
+    document.write(functionOne(input1));
+</script>
+<br>
+<hr>
+
+<p>Functions 2</p>
+<script>
+    document.write(functionTwo(num1, num2, num3));
+</script>
+<br>
+<hr>
+
+<p>Variables 2</p>
+<script>
+    document.write('Name: ' + person.name + ' Age: ' + person.age + '\n Occupation: ' + person.occupation);
+</script>
+    <br>
+    <hr>
+
+<h5>New Exercise</h5>
+</div>
+<form id="add">
+    <div class="form-row">
+        <div class="form-group col-md-2">
+            <label for="Number1">Number 1</label>
+            <input type="number" class="form-control" id="Number1" placeholder="Enter Number 1">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="Number2">Number 2</label>
+            <input type="number" class="form-control" id="Number2" placeholder="Enter Number 2">
+        </div>
+    </div>
+        <br>
+    <div class="form-row">
+        <div class="form-group col-md-1" align="left">
+        <button type="button" class="btn btn-default" onclick="addition()">addition</button>
+        </div>
+
+        <div class="form-group col-md-1" align="left">
+            <button type="button" class="btn btn-default" onclick="subtraction()">subtraction</button>
+        </div>
+
+        <div class="form-group col-md-1" align="left">
+            <button type="button" class="btn btn-default" onclick="multiplication()">multiplication</button>
+        </div>
+
+        <div class="form-group col-md-1" align="left">
+            <button type="button" class="btn btn-default" onclick="division()">division</button>
+        </div>
+
+        <div class="form-group col-md-1" align="left">
+            <button type="reset" class="btn btn-default">reset</button>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="form-row">
+        <div class="form-group col-md-2">
+            <label for="Number2">Result</label>
+            <input type="number" class="form-control" id="result" placeholder="Result">
+        </div>
+    </div>
+</form>
+</body>
+</html>
