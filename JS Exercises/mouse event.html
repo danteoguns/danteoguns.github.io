@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<input lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variables</title>
+
+    <style type="text/css">
+        /*@import url("css/bootstrap-3.3.7-dist/css/bootstrap.css");*/
+        /*@import url("css/bootstrap-3.3.7-dist/css/bootstrap.min.css");*/
+        /*@import url("css/bootstrap-3.3.7-dist/css/bootstrap-theme.css");*/
+        /*@import url("css/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css");*/
+
+        .space {
+            padding: 15px 15px 0px;
+        }
+
+    </style>
+
+    <!--&lt;!&ndash;Variables 1&ndash;&gt;-->
+    <!--<script>-->
+        <!--var mouseX = 0;-->
+        <!--var mouseY = 0;-->
+        <!--var formPos = getPosition(form);-->
+
+        <!--form.addEventListener("mousemove", setMousePosition, false);-->
+
+        <!--function setMousePosition(e) {-->
+            <!--mouseX = e.clientX - formPos.x;-->
+            <!--mouseY = e.clientY - formPos.y;-->
+        <!--}-->
+    <!--</script>-->
+
+    <!--<script>-->
+        <!--function getMousePosition(el) {-->
+            <!--xPosition = 0;-->
+            <!--yPosition = 0;-->
+
+            <!--while (el){-->
+                <!--xPosition += (el.offsetLeft - el.scrollLeft + el.clientLeft);-->
+                <!--yPosition += (el.offsetTop - el.screenTop + el.clientTop);-->
+                <!--el = el.offsetParent;-->
+            <!--}-->
+
+            <!--return {-->
+                <!--x: xPosition,-->
+                <!--y: yPosition-->
+            <!--};-->
+        <!--}-->
+    <!--</script>-->
+
+    <script>
+        var T;
+        var S;
+        var FS=10;
+        function moving(){
+            T = window.document.getElementById("textBox");
+            S=window.document.getElementById("SP");
+            S.style.top=window.event.clientY;
+            console.log(S.style.top);
+            S.style.left=window.event.clientX;
+            if (event.ctrlKey){ FS++;}
+            if (event.altKey){ FS--;}
+            S.style.fontSize=FS;
+        }
+        function mouseout(){
+            if(T.value!="")	S.innerHTML = T.value;
+        }
+    </script>
+
+
+<body onmousemove="moving()">
+
+<script>
+    function foo(a,b,c,d,e,f,g,h){
+        var n = arguments.length,
+            total = 0;
+        for (var i = 0; i < n; i++) {
+            total += arguments[i];
+        }
+        console.log(total);
+    }
+    function bar(){
+        var para = document.createElement("p");
+        var app = "The String I would like to create";
+
+        para.appendChild(document.createTextNode(app));
+
+        var element = document.getElementById("demo");
+
+        element.appendChild(para);
+    }
+    function goAway(){
+        var element = document.getElementById("demo");
+        element.style.visibility = "hidden";
+    }
+    function comeBack(){
+        var element = document.getElementById("demo");
+        element.style.visibility = "visible";
+    }
+    function jsonStuff(){
+        var requestURL = 'https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json';
+        var request = new XMLHttpRequest();
+        request.open('GET', requestURL);
+        request.responseType = 'json';
+        request.send();
+        request.onload = function () {
+            var superHeroes = request.response;
+
+            console.log(superHeroes);
+
+            for (hero in superHeroes){
+
+                console.log(hero);
+
+                console.log(superHeroes[hero]);
+
+                if (hero == "members"){
+
+                    for (member in superHeroes[hero]){
+
+                        console.log(superHeroes[hero][member]);
+
+                        if (superHeroes[hero][member].name == "Eternal Flame"){
+
+                            var para = document.createElement("p");
+                            var app = "There secretIdentity is: " + superHeroes[hero][member].secretIdentity;
+
+                            para.appendChild(document.createTextNode(app));
+
+                            var element = document.getElementById("demo");
+
+                            element.appendChild(para);
+
+                        }
+
+
+                    }
+
+                }
+
+
+            }
+        }
+    }
+</script>
+
+<div>
+
+    <input type = "button" onclick = "foo(1,2,3)" />
+
+    <input type = "button" onclick = "bar()" />
+
+    <input type = "button" onmouseenter = "goAway()" />
+
+    <input type = "button" onmouseenter = "comeBack()" />
+
+    <input type = "button" onclick = "jsonStuff()" />
+
+
+</div>
+
+<div id = "demo"></div>
+
+</body>
+<input type="text" id="textBox" value ="abc"
+       style="position:absolute;top:50;left:50"
+       onmouseleave="mouseout()"></input>
+<span style="position:absolute;top:100;left:200" id="SP">The Shafeeq</span>
+</html>​
+<!--<body onmousemove="moving()">-->
+
+<!--</body>-->
+<!--<div class="space">-->
+    <!--<p>Text to move with mouse</p>-->
+    <!--<form>-->
+        <!--<div class="form-row">-->
+            <!--<div class="form-group col-md-2">-->
+                <!--<label for="Number1"></label>-->
+<!--<input type="text" id="textBox" value ="abc" style="position:absolute;top:50;left:50" onmouseleave="mouseout()"></input>-->
+                <!--<span style="position:absolute;top:100;left:200" id="SD">The Daniel</span>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</form>-->
+    <!--<hr>-->
+<!--</div>-->
+<!--</html>-->
