@@ -19,6 +19,15 @@
         }
 
     </style>
+</head>
+<body>
+<div class="space">
+    <p>Creating A Script</p>
+
+    <script>
+        alert('Hello World');
+    </script>
+    <hr>
 
     <!--Variables 1-->
     <script>
@@ -26,6 +35,15 @@
         var two = 9;
         var three = one + two;
     </script>
+
+    <p>Variables 1</p>
+    <script>
+        alert(three);
+        console.log(three);
+        document.write(three);
+    </script>
+    <br>
+    <hr>
 
     <!--Function 1-->
     <script>
@@ -35,6 +53,12 @@
             return input1*input1;
         }
     </script>
+    <p>Functions 1</p>
+    <script>
+        document.write(functionOne(input1));
+    </script>
+    <br>
+    <hr>
 
     <!--Function 2-->
     <script>
@@ -46,22 +70,105 @@
             return num1+num2+num3;
         }
     </script>
+    <p>Functions 2</p>
+    <script>
+        document.write(functionTwo(num1, num2, num3));
+    </script>
+    <br>
+    <hr>
 
-    <!--Variables 2-->
+
+    <!--Variables 2 & Events 1-->
     <script>
         var person = {
             name: 'Daniel',
             age: 22,
             occupation: 'IT Consultant'
+        };
+
+        function increaseAge() {
+            person.age = person.age + 1;
+            document.getElementById('newAge').innerHTML = person.age;
+//            document.write('Age:' + person.age);
+            console.log(person);
         }
     </script>
 
+    <p>Variables 2</p>
+    <script>
+        document.write('Name:' + person.name + '<br>' + 'Age:' + person.age + '<br>' + 'Occupation: ' + person.occupation +'<br>');
+        person.occupation = "Business Analyst";
+        document.write('<br>' + 'The Occupation has changed' + '<br>' + '<br>' + 'Name:' + person.name + '<br>' + 'Age:' + person.age + '<br>' + 'Occupation: ' + person.occupation);
+    </script>
+    <br>
+    <hr>
+
+    <p>Events 1</p>
+    <div>
+    <p>Age: <b  id="newAge">22</b></p>
+    <button type="button" class="btn btn-default" onclick="increaseAge()">Increase Age</button>
+    </div>
+    <hr>
+
+    <!--Fizz Buzz-->
+    <script>
+        function fizzBuzz() {
+
+            for (var i = 1; i <= 100; i++) {
+                FB.innerHTML = JSON.stringify(i);
+//                x = i;
+                if (i % 15 == 0) {
+                    console.log("FizzBuzz");
+
+                    var pTag = document.createElement("p");
+                    pTag.appendChild(document.createTextNode(i));
+                    var element = document.getElementById("demo");
+                    element.appendChild(pTag);
+                    document.getElementsByTagName('FB').innerHTML = "FizzBuzz" + "<br>";
+                }
+                else if (i % 3 == 0) {
+                    console.log("Fizz");
+
+                    var pTag = document.createElement("p");
+                    pTag.appendChild(document.createTextNode(i));
+                    var element = document.getElementById("demo");
+                    element.appendChild(pTag);
+                    document.getElementById('FB').innerHTML = "Fizz" + "<br>";
+                }
+                else if (i % 5 == 0) {
+                    console.log("Buzz");
+
+                    var pTag = document.createElement("p");
+                    pTag.appendChild(document.createTextNode(i));
+                    var element = document.getElementById("demo");
+                    element.appendChild(pTag);
+                    document.getElementById('FB').innerHTML = "Buzz" + "<br>";
+                }
+                else {
+                    console.log(i);
+                    var pTag = document.createElement("p");
+                    pTag.appendChild(document.createTextNode(i));
+                    var element = document.getElementById("demo");
+                    element.appendChild(pTag);
+                }
+//                x = x + "\n";
+//
+//                document.getElementById('FB').value = i;
+            }
+        }
+    </script>
+
+    <p id="FB">0</p>
+    <div id = "demo"></div>
+    <button type="button" class="btn btn-default" onclick="fizzBuzz()">Click to Fizz or Buzz</button>
+
+    <hr>
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
     <!--New Exercise-->
     <script>
         function noValue() {
             return window.alert("Please Enter A Value");
         }
-
     </script>
 
     <!--Addition-->
@@ -119,46 +226,11 @@
             }
         }
     </script>
-</head>
-<body>
-<div class="space">
-<p>Creating A Script</p>
-<script>
-    alert('Hello World');
-</script>
-<hr>
 
-<p>Variables 1</p>
-<script>
-    alert(three);
-    console.log(three);
-    document.write(three);
-</script>
-<br>
-<hr>
+    <!--FUNCTIONS 3 / EVENTS 2-->
 
-<p>Functions 1</p>
-<script>
-    document.write(functionOne(input1));
-</script>
-<br>
-<hr>
 
-<p>Functions 2</p>
-<script>
-    document.write(functionTwo(num1, num2, num3));
-</script>
-<br>
-<hr>
-
-<p>Variables 2</p>
-<script>
-    document.write('Name: ' + person.name + ' Age: ' + person.age + '\n Occupation: ' + person.occupation);
-</script>
-    <br>
-    <hr>
-
-<h5>New Exercise</h5>
+    <h5>New Exercise</h5>
 </div>
 <form>
     <div class="form-row">
